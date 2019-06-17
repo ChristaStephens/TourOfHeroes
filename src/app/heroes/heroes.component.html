@@ -1,5 +1,24 @@
 {{heroes}}
-<!-- what's displayed from exported file -->
-<h2>{{hero.name}} Details</h2>
+
+<!--
+  this is what displayed from exported file
+  the pipes activate built in angular code
+  it makes the data from hero name appear uppercase
+ -->
+<h2>{{hero.name | uppercase}} Details</h2>
 <div><span>Id: </span>{{hero.id}}</div>
 <div><span>Name: </span>{{hero.name}}</div>
+
+
+<!-- [(ngModel)] is Angular's two-way data binding syntax.
+
+Here it binds the hero.name property to the HTML textbox
+so that data can flow in both directions: from the hero.name
+property to the textbox, and from the textbox back to the hero.name.
+ -->
+
+<div>
+  <label>Input Hero's Name:
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </label>
+</div>

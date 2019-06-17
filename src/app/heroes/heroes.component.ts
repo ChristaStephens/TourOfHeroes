@@ -13,8 +13,8 @@ into export class
 */
 export class HeroesComponent implements OnInit {
 hero: Hero = {
-  Id: 1,
-  Name: "Windstorm"
+  id: 1,
+  name: "Windstorm"
 };
   constructor() { }
 
